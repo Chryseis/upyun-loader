@@ -1,0 +1,27 @@
+{
+  "name": "upyun-loader",
+  "version": "0.0.1",
+  "description": "replace image url",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel src -d dist"
+  },
+  "keywords": [
+    "upyun",
+    "loader"
+  ],
+  "author": "allen",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  },
+  "dependencies": {
+    "loader-utils": "^1.1.0",
+    "schema-utils": "^0.4.2"
+  }
+}
