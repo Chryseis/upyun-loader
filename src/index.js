@@ -1,6 +1,7 @@
 import path from 'path';
 import loaderUtils from 'loader-utils';
-import validateOptions from 'schema-utils'
+import validateOptions from 'schema-utils';
+import schema from './options.json';
 
 export default function loader(content) {
     if (!this.emitFile) throw new Error('Upyun Loader\n\nemitFile is required from module system');
@@ -16,6 +17,10 @@ export default function loader(content) {
         content,
         regExp: options.regExp,
     });
+
+    let publicPath = `__webpack_public_path__ + ${JSON.stringify(url)}`;
+
+    return `module.exports = ${publicPath};`;
 }
 
 export const raw = true;
